@@ -25,7 +25,7 @@ class Knight extends Component {
     return connectDragSource(
       <div style={{
         opacity: isDragging ? 0.5 : 1,
-        fontSize: 25,
+        fontSize: '55px',
         fontWeight: 'bold',
         cursor: 'move'
       }}>
