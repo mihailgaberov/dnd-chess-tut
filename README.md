@@ -1,1 +1,1 @@
-This repo contains the implementation done following [React DnD tutorial](http://react-dnd.github.io/react-dnd/docs-tutorial.html)
+This repo contains the implementation done following [React DnD tutorial.](http://react-dnd.github.io/react-dnd/docs-tutorial.html)
