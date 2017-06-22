@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { default as TouchBackend } from 'react-dnd-touch-backend'
 import { DragDropContext } from 'react-dnd'
-import HTML5Backend from 'react-dnd-html5-backend'
+// import HTML5Backend from 'react-dnd-html5-backend'
 
 import Knight from './Knight'
 import { canMoveKnight, moveKnight } from './Game'
@@ -26,7 +27,7 @@ class Board extends Component {
   renderPiece(x, y) {
     const [knightX, knightY] = this.props.knightPosition
     if (x === knightX && y === knightY) {
-      return <Knight />
+      return <Knight connectDragSource={this.handleSquareClick(x, y)} />
     }
   }
 
@@ -60,4 +61,5 @@ Board.propTypes = {
   ).isRequired
 }
 
-export default DragDropContext(HTML5Backend)(Board)
+// export default DragDropContext(HTML5Backend)(Board)
+export default DragDropContext(TouchBackend({ enableMouseEvents: true}))(Board)
